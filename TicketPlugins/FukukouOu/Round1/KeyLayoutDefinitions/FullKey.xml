@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<KeyLayout Header="フルキー">
+  <Key Name="" Command=""/>
+  <Key Name="" Command=""/>
+  <Key Name="" Command=""/>
+  <Key Name="" Command=""/>
+  <Key Name="" Command=""/>
+  <Key Name="" Command=""/>
+	
+	<Key Name="〇チーム１" Command="SET;CLS1,〇"/>
+	<Key Name="〇チーム２" Command="SET;CLS2,〇"/>
+	<Key Name="〇チーム３" Command="SET;CLS3,〇"/>
+	<Key Name="〇チーム４" Command="SET;CLS4,〇"/>
+	<Key Name="〇チーム５" Command="SET;CLS5,〇"/>
+  <Key Name="〇チーム６" Command="SET;CLS6,〇"/>
+
+  <Key Name="✕チーム１" Command="SET;CLS1,✕"/>
+  <Key Name="✕チーム２" Command="SET;CLS2,✕"/>
+  <Key Name="✕チーム３" Command="SET;CLS3,✕"/>
+  <Key Name="✕チーム４" Command="SET;CLS4,✕"/>
+  <Key Name="✕チーム５" Command="SET;CLS5,✕"/>
+  <Key Name="✕チーム６" Command="SET;CLS6,✕"/>
+
+
+  <Key Name="ム チーム１" Command="SET;CLS1,ム"/>
+  <Key Name="ム チーム２" Command="SET;CLS2,ム"/>
+  <Key Name="ム チーム３" Command="SET;CLS3,ム"/>
+  <Key Name="ム チーム４" Command="SET;CLS4,ム"/>
+  <Key Name="ム チーム５" Command="SET;CLS5,ム"/>
+  <Key Name="ム チーム６" Command="SET;CLS6,ム"/>
+
+	<Key Name="" Command=""/>
+	<Key Name="" Command=""/>
+	<Key Name="" Command=""/>
+	<Key Name="" Command=""/>
+	<Key Name="" Command=""/>
+	<Key Name="" Command=""/>
+
+	<Key Name="" Command=""/>
+	<Key Name="" Command=""/>
+	<Key Name="" Command=""/>
+	<Key Name="" Command=""/>
+	<Key Name="" Command=""/>
+	<Key Name="" Command=""/>
+
+	<Key Name="" Command=""/>
+	<Key Name="" Command=""/>
+	<Key Name="" Command=""/>
+	<Key Name="" Command=""/>
+	<Key Name="" Command=""/>
+	<Key Name="" Command=""/>
+
+	<Key Name="" Command=""/>
+	<Key Name="" Command=""/>
+	<Key Name="" Command=""/>
+	<Key Name="" Command=""/>
+	<Key Name="" Command=""/>
+	<Key Name="" Command=""/>
+
+	<Key Name="" Command=""/>
+	<Key Name="" Command=""/>
+	<Key Name="" Command=""/>
+	<Key Name="" Command=""/>
+	<Key Name="" Command=""/>
+	<Key Name="" Command=""/>
+
+	<Key Name="" Command=""/>
+	<Key Name="" Command=""/>
+	<Key Name="" Command=""/>
+	<Key Name="" Command=""/>
+	<Key Name="" Command=""/>
+	<Key Name="" Command=""/>
+</KeyLayout>

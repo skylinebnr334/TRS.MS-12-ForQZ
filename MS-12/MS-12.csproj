@@ -248,6 +248,18 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="LayoutDefinitions\GroupMenu\FukukouOuManager\Round3.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LayoutDefinitions\GroupMenu\FukukouOuManager\Round2.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LayoutDefinitions\GroupMenu\FukukouOuManager\Round1.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LayoutDefinitions\GroupMenu\FukukouOuManager\ScrManager.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="LayoutDefinitions\GroupMenu\LiteInventoryManager\Sell.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -278,6 +290,9 @@
     <None Include="Logs\folder.dat">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <Content Include="Settings\FukukouOu.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Settings\Terminal.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

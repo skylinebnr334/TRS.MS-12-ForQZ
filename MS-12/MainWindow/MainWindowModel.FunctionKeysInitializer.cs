@@ -258,6 +258,13 @@ namespace TRS.TMS12
                         {
                             ResultControlModel.Show(result);
                         }
+                        if(result is RefreshableSendResult)
+                        {
+                            if (((RefreshableSendResult)result).isrefresh)
+                            {
+                                PluginHost.CurrentTicket.SetDefault();
+                            }
+                        }
 
                         await Task.Run(() =>
                         {

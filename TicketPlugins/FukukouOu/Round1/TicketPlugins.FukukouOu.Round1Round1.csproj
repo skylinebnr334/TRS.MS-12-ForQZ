@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{86216CD3-26D9-43A7-B121-83D00D6E9BE5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TRS.TMS12.TicketPlugins.FukukouOu.Round1</RootNamespace>
+    <AssemblyName>Round1</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\MS-12\bin\Debug\Any CPU\Plugins\FukukouOu\Round1\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\MS-12\bin\Release\Any CPU\Plugins\FukukouOu\Round1\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Gayak.ObservableDictionary.NET45">
+      <HintPath>..\..\..\MS-12\Gayak.ObservableDictionary.NET45.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="PresentationFramework.Classic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="InputControl.xaml.cs">
+      <DependentUpon>InputControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InputControl_For_DefaultScoreSetting.xaml.cs">
+      <DependentUpon>InputControl_For_DefaultScoreSetting.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="KeyControl.xaml.cs">
+      <DependentUpon>KeyControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="KeyControl_For_DefaultScoreSetting.xaml.cs">
+      <DependentUpon>KeyControl_For_DefaultScoreSetting.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PluginInfo_For_DefaultScoreSetting.cs" />
+    <Compile Include="Sender.cs" />
+    <Compile Include="Sender_For_DefaultScoreSetting.cs" />
+    <Compile Include="TicketPluginInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".pluginlist">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="CommonServiceLocator">
+      <Version>2.0.6</Version>
+    </PackageReference>
+    <PackageReference Include="Prism.Core">
+      <Version>8.0.0.1909</Version>
+    </PackageReference>
+    <PackageReference Include="Prism.Unity">
+      <Version>8.0.0.1909</Version>
+    </PackageReference>
+    <PackageReference Include="Prism.Wpf">
+      <Version>8.0.0.1909</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\FukukouOuDtConnector\FukukouOuDtConnector.csproj">
+      <Project>{5ac6bc54-c72d-40ec-991a-c9d075fb7d8c}</Project>
+      <Name>FukukouOuDtConnector</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\PluginHost\MS-12.PluginHost.csproj">
+      <Project>{31FF6588-AA25-4100-AAFC-6D4C733A6EB8}</Project>
+      <Name>MS-12.PluginHost</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="InputControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="InputControl_For_DefaultScoreSetting.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="KeyControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="KeyControl_For_DefaultScoreSetting.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="KeyLayoutDefinitions\FullKey.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="KeyLayoutDefinitions\Number_For_DefaultScoreSetting.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="KeyLayoutDefinitions\Number.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

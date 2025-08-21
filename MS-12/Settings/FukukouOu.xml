@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FukukouOuSetting>
+  <Round1>
+    <ServerUrl Value="http://localhost:810/Server1"/>
+  </Round1>
+  <Round2>
+    <ServerUrl Value="http://localhost:810/Server2"/>
+  </Round2>
+  <Round3>
+    <ServerUrl Value="http://localhost:810/Server3"/>
+  </Round3>
+</FukukouOuSetting>

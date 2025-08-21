@@ -44,5 +44,9 @@ namespace TRS.TMS12.Static
             catch { }
             return number;
         }
+        public static string IntToWideString(int value)
+        {
+            return Strings.StrConv(value.ToString(), VbStrConv.Wide);
+        }
     }
 }

@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<KeyLayout Header="フルキー">
+  <Key Name="" Command=""/>
+  <Key Name="" Command=""/>
+  <Key Name="" Command=""/>
+  <Key Name="" Command=""/>
+  <Key Name="" Command=""/>
+  <Key Name="" Command=""/>
+	
+	<Key Name="〇チーム１" Command="SET;CLS1,〇"/>
+	<Key Name="〇チーム２" Command="SET;CLS2,〇"/>
+  <Key Name="" Command=""/>
+  <Key Name="" Command=""/>
+  <Key Name="" Command=""/>
+  <Key Name="" Command=""/>
+  
+  <Key Name="✕チーム１" Command="SET;CLS1,✕"/>
+  <Key Name="✕チーム２" Command="SET;CLS2,✕"/>
+  <Key Name="" Command=""/>
+  <Key Name="" Command=""/>
+  <Key Name="" Command=""/>
+  <Key Name="" Command=""/>
+
+
+  <Key Name="ム チーム１" Command="SET;CLS1,ム"/>
+  <Key Name="ム チーム２" Command="SET;CLS2,ム"/>
+  <Key Name="" Command=""/>
+  <Key Name="" Command=""/>
+  <Key Name="" Command=""/>
+  <Key Name="" Command=""/>
+
+	<Key Name="" Command=""/>
+	<Key Name="" Command=""/>
+	<Key Name="" Command=""/>
+	<Key Name="" Command=""/>
+	<Key Name="" Command=""/>
+	<Key Name="" Command=""/>
+
+	<Key Name="" Command=""/>
+	<Key Name="" Command=""/>
+	<Key Name="" Command=""/>
+	<Key Name="" Command=""/>
+	<Key Name="" Command=""/>
+	<Key Name="" Command=""/>
+
+	<Key Name="" Command=""/>
+	<Key Name="" Command=""/>
+	<Key Name="" Command=""/>
+	<Key Name="" Command=""/>
+	<Key Name="" Command=""/>
+	<Key Name="" Command=""/>
+
+	<Key Name="" Command=""/>
+	<Key Name="" Command=""/>
+	<Key Name="" Command=""/>
+	<Key Name="" Command=""/>
+	<Key Name="" Command=""/>
+	<Key Name="" Command=""/>
+
+	<Key Name="" Command=""/>
+	<Key Name="" Command=""/>
+	<Key Name="" Command=""/>
+	<Key Name="" Command=""/>
+	<Key Name="" Command=""/>
+	<Key Name="" Command=""/>
+
+	<Key Name="" Command=""/>
+	<Key Name="" Command=""/>
+	<Key Name="" Command=""/>
+	<Key Name="" Command=""/>
+	<Key Name="" Command=""/>
+	<Key Name="" Command=""/>
+</KeyLayout>

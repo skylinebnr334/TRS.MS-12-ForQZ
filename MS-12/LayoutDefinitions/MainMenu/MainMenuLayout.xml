@@ -10,14 +10,28 @@
 		IgnoreHeightExcess="True"　…
 	-->
 	<Left>
-		<GroupBox Header="ＬＩＭ業務（在庫管理サンプル）" Row="3">
-			<Content GroupName="発売" GroupSource="../GroupMenu/LiteInventoryManager/Sell.xml" TypicalTicketName="商品発売" TypicalTicketType="TRSTickets.NumberedTickets.NumberedTicket.PluginInfo"/>
-			<Content GroupName="登録／管理" GroupSource="../GroupMenu/LiteInventoryManager/Management.xml" TypicalTicketName="商品登録" TypicalTicketType="TRSTickets.NumberedTickets.NumberedTicket.PluginInfo"/>
-		</GroupBox>
-		<GroupBox Header="ＴＲＳ業務（予約・整理券発券サンプル）" Row="2">
+		<!--	
+		?<GroupBox Header="ＬＩＭ業務（在庫管理サンプル）" Row="3">
+			?<Content GroupName="発売" GroupSource="../GroupMenu/LiteInventoryManager/Sell.xml" TypicalTicketName="商品発売" TypicalTicketType="TRSTickets.NumberedTickets.NumberedTicket.PluginInfo"/>
+			?<Content GroupName="登録／管理" GroupSource="../GroupMenu/LiteInventoryManager/Management.xml" TypicalTicketName="商品登録" TypicalTicketType="TRSTickets.NumberedTickets.NumberedTicket.PluginInfo"/>
+		?</GroupBox>
+		?<GroupBox Header="ＴＲＳ業務（予約・整理券発券サンプル）" Row="2">
+			?<Content GroupName="整理券" GroupSource="../GroupMenu/TRS/NumberedTickets.xml" TypicalTicketName="整　理　券" TypicalTicketType="TRSTickets.NumberedTickets.NumberedTicket.PluginInfo"/>
+			?<Content GroupName="入場券" GroupSource="../GroupMenu/TRS/PlatformTickets.xml" TypicalTicketName="入　場　券" TypicalTicketType="TRSTickets.PlatformTickets.PlatformTicket.PluginInfo"/>
+		?</GroupBox>
+    -->
+
+    <GroupBox Header="福高王管理" Row="3">
+      <Content GroupName="Round 1" GroupSource="../GroupMenu/FukukouOuManager/Round1.xml" TypicalTicketName="Round 1" TypicalTicketType="FukukouOu.Round1.PluginInfo"/>
+      <Content GroupName="画面管理" GroupSource="../GroupMenu/FukukouOuManager/ScrManager.xml" TypicalTicketName="画面管理" TypicalTicketType="TRSTickets.NumberedTickets.NumberedTicket.PluginInfo"/>
+      <Content GroupName="Round 2" GroupSource="../GroupMenu/FukukouOuManager/Round2.xml" TypicalTicketName="Round 2" TypicalTicketType="FukukouOu.Round2.PluginInfo"/>
+      <Content GroupName="Round 3" GroupSource="../GroupMenu/FukukouOuManager/Round3.xml" TypicalTicketName="Round 3" TypicalTicketType="FukukouOu.Round3.PluginInfo"/>
+
+    </GroupBox>
+    <GroupBox Header="ＴＲＳ業務（予約・整理券発券サンプル）" Row="2">
 			<Content GroupName="整理券" GroupSource="../GroupMenu/TRS/NumberedTickets.xml" TypicalTicketName="整　理　券" TypicalTicketType="TRSTickets.NumberedTickets.NumberedTicket.PluginInfo"/>
-			<Content GroupName="入場券" GroupSource="../GroupMenu/TRS/PlatformTickets.xml" TypicalTicketName="入　場　券" TypicalTicketType="TRSTickets.PlatformTickets.PlatformTicket.PluginInfo"/>
-		</GroupBox>
+      <Content GroupName="入場券" GroupSource="../GroupMenu/TRS/PlatformTickets.xml" TypicalTicketName="入　場　券" TypicalTicketType="TRSTickets.PlatformTickets.PlatformTicket.PluginInfo"/>
+    </GroupBox>
 	</Left>
 	<Right>
 		<GroupBox Header="共通業務" Row="2"><!--

@@ -1,5 +1,5 @@
-﻿using System;
-using System.ComponentModel;
+﻿using Prism.Mvvm;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,18 +14,11 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-using IOPath = System.IO;
-
-using Prism.Mvvm;
-using Prism.Commands;
-
-using TRS.TMS12.Resources;
-
-namespace TRS.TMS12.TicketPlugins.TRSTickets.NumberedTickets.Cancel
+namespace TRS.TMS12.TicketPlugins.FukukouOu.Round3
 {
-    public class KeyControlViewModel : BindableBase
+    public class KeyControl_For_DefaultScoreSettingViewModel : BindableBase
     {
-        private PluginInfo m;
+        private PluginInfo_For_DefaultScoreSetting m;
 
         public Resources.KeyControlViewModel KeyBaseViewModel { get; } = new Resources.KeyControlViewModel();
 
@@ -36,7 +29,7 @@ namespace TRS.TMS12.TicketPlugins.TRSTickets.NumberedTickets.Cancel
             set { SetProperty(ref _Visibility, value); }
         }
 
-        public KeyControlViewModel(PluginInfo m)
+        public KeyControl_For_DefaultScoreSettingViewModel(PluginInfo_For_DefaultScoreSetting m)
         {
             this.m = m;
             this.m.PropertyChanged += (sender2, e2) =>
@@ -63,11 +56,14 @@ namespace TRS.TMS12.TicketPlugins.TRSTickets.NumberedTickets.Cancel
         }
     }
 
-    public partial class KeyControl:UserControl
+    /// <summary>
+    /// KeyControl_For_DefaultScoreSetting.xaml の相互作用ロジック
+    /// </summary>
+    public partial class KeyControl_For_DefaultScoreSetting
     {
-        public KeyControlViewModel vm;
+        public KeyControl_For_DefaultScoreSettingViewModel vm;
 
-        public KeyControl(KeyControlViewModel vm)
+        public KeyControl_For_DefaultScoreSetting(KeyControl_For_DefaultScoreSettingViewModel vm)
         {
             InitializeComponent();
             this.vm = vm;

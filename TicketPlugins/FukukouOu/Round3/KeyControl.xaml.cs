@@ -1,5 +1,5 @@
-﻿using System;
-using System.ComponentModel;
+﻿using Prism.Mvvm;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,15 +14,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-using IOPath = System.IO;
-
-using Prism.Mvvm;
-using Prism.Commands;
-
-using TRS.TMS12.Resources;
-
-namespace TRS.TMS12.TicketPlugins.TRSTickets.NumberedTickets.Cancel
+namespace TRS.TMS12.TicketPlugins.FukukouOu.Round3
 {
+
     public class KeyControlViewModel : BindableBase
     {
         private PluginInfo m;
@@ -63,7 +57,7 @@ namespace TRS.TMS12.TicketPlugins.TRSTickets.NumberedTickets.Cancel
         }
     }
 
-    public partial class KeyControl:UserControl
+    public partial class KeyControl
     {
         public KeyControlViewModel vm;
 

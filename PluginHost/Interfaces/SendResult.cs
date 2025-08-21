@@ -131,4 +131,17 @@ namespace TRS.TMS12.Interfaces
 
         public List<TicketBase> CreateTickets(int issueNumber, int countStartNumber) => createTicketsFunc(issueNumber, countStartNumber);
     }
+    public class RefreshableSendResult : SendResult
+    {
+        public bool isrefresh { get; set; } = false;
+        public static RefreshableSendResult Yes(string text, string message, bool isFullScreen, bool isRefresh) => new RefreshableSendResult()
+        {
+
+            IsFullScreen = isFullScreen,
+            Result = SendResultType.Yes,
+            Text = text,
+            Message = message,
+            isrefresh=isRefresh
+        };
+    }
 }
