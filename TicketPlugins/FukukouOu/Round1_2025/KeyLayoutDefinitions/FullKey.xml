@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<KeyLayout Header="フルキー">
+	
+	<Key Name="〇チーム１" Command="SET;CLS1,〇"/>
+	<Key Name="〇チーム２" Command="SET;CLS2,〇"/>
+	<Key Name="〇チーム３" Command="SET;CLS3,〇"/>
+	<Key Name="〇チーム４" Command="SET;CLS4,〇"/>
+  <Key Name="〇チーム５" Command="SET;CLS5,〇"/>
+  <Key Name="〇チーム６" Command="SET;CLS6,〇"/>
+  
+  <Key Name="✕チーム１" Command="SET;CLS1,✕"/>
+  <Key Name="✕チーム２" Command="SET;CLS2,✕"/>
+  <Key Name="✕チーム３" Command="SET;CLS3,✕"/>
+  <Key Name="✕チーム４" Command="SET;CLS4,✕"/>
+  <Key Name="✕チーム５" Command="SET;CLS5,✕"/>
+  <Key Name="✕チーム６" Command="SET;CLS6,✕"/>
+
+
+  <Key Name="ム チーム１" Command="SET;CLS1,ム"/>
+  <Key Name="ム チーム２" Command="SET;CLS2,ム"/>
+  <Key Name="ム チーム３" Command="SET;CLS3,ム"/>
+  <Key Name="ム チーム４" Command="SET;CLS4,ム"/>
+  <Key Name="ム チーム５" Command="SET;CLS5,ム"/>
+  <Key Name="ム チーム６" Command="SET;CLS6,ム"/>
+  <Key Name="" Command=""/>
+  <Key Name="" Command=""/>
+  <Key Name="" Command=""/>
+  <Key Name="" Command=""/>
+  <Key Name="" Command=""/>
+  <Key Name="" Command=""/>
+  <Key Name="1" Command="SET;NextQuestion,1"/>
+  <Key Name="2" Command="SET;NextQuestion,2"/>
+  <Key Name="3" Command="SET;NextQuestion,3"/>
+  <Key Name="4" Command="SET;NextQuestion,4"/>
+  <Key Name="5" Command="SET;NextQuestion,5"/>
+  <Key Name="6" Command="SET;NextQuestion,6"/>
+  <Key Name="7" Command="SET;NextQuestion,7"/>
+  <Key Name="8" Command="SET;NextQuestion,8"/>
+  <Key Name="9" Command="SET;NextQuestion,9"/>
+  <Key Name="10" Command="SET;NextQuestion,10"/>
+  <Key Name="11" Command="SET;NextQuestion,11"/>
+  <Key Name="12" Command="SET;NextQuestion,12"/>
+  <Key Name="13" Command="SET;NextQuestion,13"/>
+  <Key Name="14" Command="SET;NextQuestion,14"/>
+  <Key Name="15" Command="SET;NextQuestion,15"/>
+  <Key Name="16" Command="SET;NextQuestion,16"/>
+  <Key Name="17" Command="SET;NextQuestion,17"/>
+  <Key Name="18" Command="SET;NextQuestion,18"/>
+  <Key Name="19" Command="SET;NextQuestion,19"/>
+  <Key Name="20" Command="SET;NextQuestion,20"/>
+  <Key Name="21" Command="SET;NextQuestion,21"/>
+  <Key Name="22" Command="SET;NextQuestion,22"/>
+  <Key Name="23" Command="SET;NextQuestion,23"/>
+  <Key Name="24" Command="SET;NextQuestion,24"/>
+  <Key Name="25" Command="SET;NextQuestion,25"/>
+  <Key Name="26" Command="SET;NextQuestion,26"/>
+  <Key Name="27" Command="SET;NextQuestion,27"/>
+  <Key Name="28" Command="SET;NextQuestion,28"/>
+  <Key Name="29" Command="SET;NextQuestion,29"/>
+  <Key Name="30" Command="SET;NextQuestion,30"/>
+  <Key Name="31" Command="SET;NextQuestion,31"/>
+  <Key Name="32" Command="SET;NextQuestion,32"/>
+  <Key Name="33" Command="SET;NextQuestion,33"/>
+  <Key Name="34" Command="SET;NextQuestion,34"/>
+  <Key Name="35" Command="SET;NextQuestion,35"/>
+  <Key Name="36" Command="SET;NextQuestion,36"/>
+
+</KeyLayout>

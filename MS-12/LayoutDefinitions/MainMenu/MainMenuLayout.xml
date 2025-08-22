@@ -22,9 +22,9 @@
     -->
 
     <GroupBox Header="福高王管理" Row="3">
-      <Content GroupName="Round 1" GroupSource="../GroupMenu/FukukouOuManager/Round1.xml" TypicalTicketName="Round 1" TypicalTicketType="FukukouOu.Round1.PluginInfo"/>
+      <Content GroupName="Round 1" GroupSource="../GroupMenu/FukukouOuManager/Round1_2025.xml" TypicalTicketName="Round 1 2025" TypicalTicketType="FukukouOu.Round1_2025.PluginInfo"/>
       <Content GroupName="画面管理" GroupSource="../GroupMenu/FukukouOuManager/ScrManager.xml" TypicalTicketName="画面管理" TypicalTicketType="TRSTickets.NumberedTickets.NumberedTicket.PluginInfo"/>
-      <Content GroupName="Round 2" GroupSource="../GroupMenu/FukukouOuManager/Round2.xml" TypicalTicketName="Round 2" TypicalTicketType="FukukouOu.Round2.PluginInfo"/>
+      <Content GroupName="Round 2 2025" GroupSource="../GroupMenu/FukukouOuManager/Round2_2025.xml" TypicalTicketName="Round 2 2025" TypicalTicketType="FukukouOu.Round2_2025.PluginInfo"/>
       <Content GroupName="Round 3" GroupSource="../GroupMenu/FukukouOuManager/Round3.xml" TypicalTicketName="Round 3" TypicalTicketType="FukukouOu.Round3.PluginInfo"/>
 
     </GroupBox>

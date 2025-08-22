@@ -44,11 +44,16 @@
     <Compile Include="Connector.cs" />
     <Compile Include="PluginInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Round1_2025_I.cs" />
+    <Compile Include="Round1_2025_USEDQJSONData.cs" />
     <Compile Include="Round1_I.cs" />
     <Compile Include="Round1_I_ScoreConfig.cs" />
     <Compile Include="Round1_I_ScoreConfig_JSONData.cs" />
+    <Compile Include="Round1_2025_JSONData.cs" />
     <Compile Include="Round1_JSONData.cs" />
+    <Compile Include="Round1_2025_NextJsonData.cs" />
     <Compile Include="Round1_next_roundJSONData.cs" />
+    <Compile Include="Round2_2025_JSONData.cs" />
     <Compile Include="Round3_I.cs" />
     <Compile Include="Round2_I.cs" />
     <Compile Include="Round3_I_ScoreConfig.cs" />

@@ -248,6 +248,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="LayoutDefinitions\GroupMenu\FukukouOuManager\Round1_2025.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LayoutDefinitions\GroupMenu\FukukouOuManager\Round2_2025.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="LayoutDefinitions\GroupMenu\FukukouOuManager\Round3.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

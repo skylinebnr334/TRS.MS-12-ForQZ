@@ -50,6 +50,25 @@ namespace FukukouOuDtConnector
             };
             return rObj;
         }
+        public static Round1_2025_JSONData Round1_2025_JSONData_DtSet(int index, int t1, int t2, int t3, int t4, int t5, int t6)
+        {
+            var rObj = new Round1_2025_JSONData
+            {
+                id = index,
+                team1 = t1,
+                team2 = t2,
+                team3 = t3,
+                team4 = t4,
+                team5 = t5,
+                team6 = t6
+            };
+            return rObj;
+        }
+        public static Round1_2025_JSONData Round1_2025_JSONData_DtSet(int index, string t1, string t2, string t3, string t4, string t5, string t6)
+        {
+            return Round1_2025_JSONData_DtSet(index, str_conv_int_r1_2025(t1), str_conv_int_r1_2025(t2), str_conv_int_r1_2025(t3), str_conv_int_r1_2025(t4), str_conv_int_r1_2025(t5), str_conv_int_r1_2025(t6));
+
+        }
         public static Round1_JSONData Round1_JSONData_DtSet(int index, string t1, string t2, string t3, string t4, string t5,string t6)
         {
             return Round1_JSONData_DtSet(index, str_conv_int_r1(t1), str_conv_int_r1(t2), str_conv_int_r1(t3), str_conv_int_r1(t4), str_conv_int_r1(t5), str_conv_int_r1(t6));
@@ -99,6 +118,18 @@ namespace FukukouOuDtConnector
                 return 2;
             }
             return 3;
+        }
+        private static int str_conv_int_r1_2025(string param1)
+        {
+            if (param1.Equals("〇"))
+            {
+                return 1;
+            }
+            else if (param1.Equals("✕"))
+            {
+                return 0;
+            }
+            return 0;
         }
     }
 }

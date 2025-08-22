@@ -9,9 +9,9 @@ using TRS.TMS12.Interfaces;
 
 namespace FukukouOuDtConnector
 {
-    public partial class Connector : IPlugin
+    public partial class Connector:IPlugin
     {
-        public int Get_NextRound()
+        public Round1_2025_NextJsonData Get_NextRound_R1_2025()
         {
             string point = this.s_url + "/next_round";
 
@@ -24,14 +24,77 @@ namespace FukukouOuDtConnector
                 resp = httpClient.SendAsync(rq);
                 rbodyS = resp.Result.Content.ReadAsStringAsync().Result;
                 hscode = resp.Result.StatusCode;
-                return int.Parse(rbodyS);
+
+                return System.Text.Json.JsonSerializer.Deserialize<Round1_2025_NextJsonData>(rbodyS);
             }
             catch (Exception e)
             {
-                return 0;
+                return new Round1_2025_NextJsonData();
             }
         }
-        public SendResult Send_R1_Result(Round1_JSONData sendData)
+        public SendResult Send_Stop2025R1()
+        {
+            string point = this.s_url + "/stop_video";
+            HttpRequestMessage rq = new HttpRequestMessage(HttpMethod.Post, point);
+            string rbodyS;
+            HttpStatusCode hscode = HttpStatusCode.NotFound;
+            Task<HttpResponseMessage> resp;
+            try
+            {
+                resp = httpClient.SendAsync(rq);
+                rbodyS = resp.Result.Content.ReadAsStringAsync().Result;
+                hscode = resp.Result.StatusCode;
+                if (hscode == HttpStatusCode.OK)
+                {
+                    return SendResult.Yes("Success!", "Yeah!", false);
+                }
+                else
+                {
+                    return SendResult.No(rbodyS);
+                }
+            }
+            catch (HttpRequestException e)
+            {
+                return SendResult.No("Error " + e.Message);
+            }
+            catch (Exception e2)
+            {
+                return SendResult.Error(e2);
+            }
+
+        }
+        public SendResult Send_Play2025R1()
+        {
+            string point = this.s_url + "/play_video";
+            HttpRequestMessage rq = new HttpRequestMessage(HttpMethod.Post, point);
+            string rbodyS;
+            HttpStatusCode hscode = HttpStatusCode.NotFound;
+            Task<HttpResponseMessage> resp;
+            try
+            {
+                resp = httpClient.SendAsync(rq);
+                rbodyS = resp.Result.Content.ReadAsStringAsync().Result;
+                hscode = resp.Result.StatusCode;
+                if (hscode == HttpStatusCode.OK)
+                {
+                    return SendResult.Yes("Success!", "Yeah!", false);
+                }
+                else
+                {
+                    return SendResult.No(rbodyS);
+                }
+            }
+            catch (HttpRequestException e)
+            {
+                return SendResult.No("Error " + e.Message);
+            }
+            catch (Exception e2)
+            {
+                return SendResult.Error(e2);
+            }
+
+        }
+        public SendResult Send_R1_2025_Result(Round1_2025_JSONData sendData,int next_question)
         {
             if (PluginHost.SendType == SendTypes.Inquire)
             {
@@ -58,7 +121,7 @@ namespace FukukouOuDtConnector
             if (PluginHost.SendType == SendTypes.Sell)
             {
                 {
-                    string point = this.s_url + "/set_round_data";
+                    string point = this.s_url + "/round_datas";
                     HttpRequestMessage rq = new HttpRequestMessage(HttpMethod.Post, point);
                     string rbodyS;
                     HttpStatusCode hscode = HttpStatusCode.NotFound;
@@ -89,12 +152,46 @@ namespace FukukouOuDtConnector
                     }
                 }
                 {
+                    string point = this.s_url + "/used_questions";
+                    HttpRequestMessage rq = new HttpRequestMessage(HttpMethod.Post, point);
+                    string rbodyS;
+                    HttpStatusCode hscode = HttpStatusCode.NotFound;
+                    Round1_2025_USEDQJSONData dA=new Round1_2025_USEDQJSONData();
+                    dA.id = next_question;
+                    var content = new StringContent(System.Text.Json.JsonSerializer.Serialize(dA), Encoding.UTF8, "application/json");
+                    Task<HttpResponseMessage> resp;
+                    try
+                    {
+                        rq.Content = content;
+                        resp = httpClient.SendAsync(rq);
+                        rbodyS = resp.Result.Content.ReadAsStringAsync().Result;
+                        hscode = resp.Result.StatusCode;
+                        if (hscode == HttpStatusCode.OK)
+                        {
+                            //return SendResult.Yes("Success!", "Yeah!", false);
+                        }
+                        else
+                        {
+                            return SendResult.No(rbodyS);
+                        }
+                    }
+                    catch (HttpRequestException e)
+                    {
+                        return SendResult.No("Error " + e.Message);
+                    }
+                    catch (Exception e2)
+                    {
+                        return SendResult.Error(e2);
+                    }
+                }
+                {
                     string point = this.s_url + "/next_round";
                     HttpRequestMessage rq = new HttpRequestMessage(HttpMethod.Post, point);
                     string rbodyS;
                     HttpStatusCode hscode = HttpStatusCode.NotFound;
-                    var nextRData = new Round1_next_roundJSONData();
-                    nextRData.data = sendData.index + 1;
+                    var nextRData = new Round1_2025_NextJsonData();
+                    nextRData.current_stage = sendData.id + 1;
+                    nextRData.current_question = next_question;
                     var content = new StringContent(System.Text.Json.JsonSerializer.Serialize(nextRData), Encoding.UTF8, "application/json");
                     Task<HttpResponseMessage> resp;
                     try
