@@ -94,7 +94,7 @@ namespace FukukouOuDtConnector
             }
 
         }
-        public SendResult Send_R1_2025_Result(Round1_2025_JSONData sendData,int next_question)
+        public SendResult Send_R1_2025_Result(Round1_2025_JSONData sendData,int next_question,bool isTwoQuestion=false)
         {
             if (PluginHost.SendType == SendTypes.Inquire)
             {
@@ -125,6 +125,15 @@ namespace FukukouOuDtConnector
                     HttpRequestMessage rq = new HttpRequestMessage(HttpMethod.Post, point);
                     string rbodyS;
                     HttpStatusCode hscode = HttpStatusCode.NotFound;
+                    if (isTwoQuestion)
+                    {
+                        sendData.team1 = sendData.team1 * 2;
+                        sendData.team2 = sendData.team2 * 2;
+                        sendData.team3 = sendData.team3 * 2;
+                        sendData.team4 = sendData.team4 * 2;
+                        sendData.team5 = sendData.team5 * 2;
+                        sendData.team6 = sendData.team6 * 2;
+                    }
                     var content = new StringContent(System.Text.Json.JsonSerializer.Serialize(sendData), Encoding.UTF8, "application/json");
                     Task<HttpResponseMessage> resp;
                     try

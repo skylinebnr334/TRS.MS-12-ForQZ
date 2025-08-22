@@ -43,7 +43,22 @@ namespace TRS.TMS12.TicketPlugins.FukukouOu.Round1_2025
             string t4 = m.TextBoxes[(int)InputControlTextBox.CLS4];
             string t5 = m.TextBoxes[(int)InputControlTextBox.CLS5];
             string t6 = m.TextBoxes[(int)InputControlTextBox.CLS6];
-            return Connector.Send_R1_2025_Result(Connector.Round1_2025_JSONData_DtSet(index,t1,t2,t3,t4,t5,t6), next_Q);
+            int current_Q = Connector.Get_NextRound_R1_2025().current_question;
+            bool isTwo = false;
+            switch (current_Q)
+            {
+
+                case 31:
+                case 17:
+                case 33:
+                case 34:
+                case 20:
+                case 13:
+                case 6:
+                    isTwo = true;
+                    break;
+            }
+            return Connector.Send_R1_2025_Result(Connector.Round1_2025_JSONData_DtSet(index,t1,t2,t3,t4,t5,t6), next_Q,isTwo);
         }
         public SendResult SendPlay()
         {
