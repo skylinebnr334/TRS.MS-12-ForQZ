@@ -39,11 +39,23 @@ namespace TRS.TMS12.TicketPlugins.FukukouOu.Round2_2025
             string t1 = m.TextBoxes[(int)InputControlTextBox.CLS1];
             string t2 = m.TextBoxes[(int)InputControlTextBox.CLS2];
             string t3 = m.TextBoxes[(int)InputControlTextBox.CLS3];
-            return Connector.Send_R2_Result(Connector.Round2_JSONData_DtSet(index,t1,t2,t3,"z"));
+            var t1_obj = Connector.Round2_2025_JSONData_REQ_Gen(0, t1, index);
+            var t2_obj = Connector.Round2_2025_JSONData_REQ_Gen(1, t2, index);
+            var t3_obj = Connector.Round2_2025_JSONData_REQ_Gen(2, t3, index);
+            Round2_2025_JSONData_REQ letObj = t1_obj;
+            if (t2_obj.current_phase_PLUS != 0)
+            {
+                letObj = t2_obj;
+            }
+            if (t3_obj.current_phase_PLUS != 0)
+            {
+                letObj = t3_obj;
+            }
+            return Connector.Send_R2_2025_Result(letObj,index);
         }
         public int Get_NextRound()
         {
-            return Connector.Get_NextRound_R2();
+            return Connector.Get_NextRound_R2_2025();
         }
     }
 }

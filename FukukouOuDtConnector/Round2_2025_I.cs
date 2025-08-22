@@ -12,7 +12,7 @@ namespace FukukouOuDtConnector
     public partial class Connector:IPlugin
     {
         
-        public int Get_NextRound_R2()
+        public int Get_NextRound_R2_2025()
         {
             string point = this.s_url2 + "/next_round";
 
@@ -25,14 +25,14 @@ namespace FukukouOuDtConnector
                 resp = httpClient.SendAsync(rq);
                 rbodyS = resp.Result.Content.ReadAsStringAsync().Result;
                 hscode = resp.Result.StatusCode;
-                return int.Parse(rbodyS);
+                return System.Text.Json.JsonSerializer.Deserialize<Round2_2025_NextJsonData>(rbodyS).current_num;
             }
             catch (Exception e)
             {
                 return 0;
             }
         }
-        public SendResult Send_R2_Result(Round2_JSONData sendData)
+        public SendResult Send_R2_2025_Result(Round2_2025_JSONData_REQ sendData,int index)
         {
             if (PluginHost.SendType == SendTypes.Inquire)
             {
@@ -47,10 +47,12 @@ namespace FukukouOuDtConnector
                     rbodyS = resp.Result.Content.ReadAsStringAsync().Result;
                     hscode = resp.Result.StatusCode;
                     return SendResult.No(rbodyS);
-                }catch(HttpRequestException e)
+                }
+                catch (HttpRequestException e)
                 {
-                    return SendResult.No("Error "+e.Message);
-                }catch(Exception e2)
+                    return SendResult.No("Error " + e.Message);
+                }
+                catch (Exception e2)
                 {
                     return SendResult.Error(e2);
                 }
@@ -59,7 +61,7 @@ namespace FukukouOuDtConnector
             if (PluginHost.SendType == SendTypes.Sell)
             {
                 {
-                    string point = this.s_url2 + "/set_round_data";
+                    string point = this.s_url2 + "/round_datas_plus";
                     HttpRequestMessage rq = new HttpRequestMessage(HttpMethod.Post, point);
                     string rbodyS;
                     HttpStatusCode hscode = HttpStatusCode.NotFound;
@@ -94,8 +96,8 @@ namespace FukukouOuDtConnector
                     HttpRequestMessage rq = new HttpRequestMessage(HttpMethod.Post, point);
                     string rbodyS;
                     HttpStatusCode hscode = HttpStatusCode.NotFound;
-                    var nextRData = new Round2_next_roundJSONData();
-                    nextRData.data = sendData.index + 1;
+                    var nextRData = new Round2_2025_NextJsonData();
+                    nextRData.current_num = index + 1;
                     var content = new StringContent(System.Text.Json.JsonSerializer.Serialize(nextRData), Encoding.UTF8, "application/json");
                     Task<HttpResponseMessage> resp;
                     try
@@ -107,7 +109,7 @@ namespace FukukouOuDtConnector
                         if (hscode == HttpStatusCode.OK)
                         {
                             //PluginHost.CurrentTicket.SetDefault();
-                            return RefreshableSendResult.Yes("Success!", "Yeah!", false,true);
+                            return RefreshableSendResult.Yes("Success!", "Yeah!", false, true);
                         }
                         else
                         {

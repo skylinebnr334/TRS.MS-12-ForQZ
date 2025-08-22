@@ -108,6 +108,35 @@ namespace FukukouOuDtConnector
             return Round3_JSONData_DtSet(index, str_conv_int_r1(t1), str_conv_int_r1(t2));
 
         }
+        public static Round2_2025_JSONData_REQ Round2_2025_JSONData_REQ_Gen(int team_id, string phase_value,
+            int index)
+        {
+            return Round2_2025_JSONData_REQ_Gen(team_id, str_conv_int_r2_2025(phase_value),
+                index);
+        }
+        public static Round2_2025_JSONData_REQ Round2_2025_JSONData_REQ_Gen(int team_id, int phase_value,
+            int index)
+        {
+            var miss_timing_X = -1;
+            var latest_down_num_X = -1;
+            if (phase_value == -2)
+            {
+                miss_timing_X = index;
+                phase_value = -1;
+            }
+            if (phase_value < 0)
+            {
+                latest_down_num_X=index;
+            }
+                var rObj = new Round2_2025_JSONData_REQ
+                {
+                    team_id = team_id,
+                    current_phase_PLUS = phase_value,
+                    miss_timing = miss_timing_X,
+                    latest_down_num = latest_down_num_X
+                };
+            return rObj;
+        }
         private static int str_conv_int_r1(string param1)
         {
             if (param1.Equals("〇"))
@@ -130,6 +159,22 @@ namespace FukukouOuDtConnector
                 return 0;
             }
             return 0;
+        }
+
+        private static int str_conv_int_r2_2025(string param1)
+        {
+            if (param1.Equals("↑"))
+            {
+                return 1;
+            }
+            else if (param1.Equals("↓"))
+            {
+                return -1;
+            }else if (param1.Equals("✕"))
+            {
+                return -2;
+            }
+                return 0;
         }
     }
 }
